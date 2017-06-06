@@ -7,7 +7,8 @@ import { Tempfan } from './tempfan';
 
 @Injectable()
 export class PiplatesService {
-    private piplatesUrl = 'http://localhost:51034/api/piplates';  // URL to web api
+    //private piplatesUrl = 'http://localhost:51034/api/piplates';  // URL to web api
+    private piplatesUrl = 'http://192.168.0.3:82/api/piplates';  // URL to web api
     private headers = new Headers({'Content-Type': 'application/json'});
     constructor(private http: Http) { }
 
@@ -16,11 +17,7 @@ export class PiplatesService {
             .toPromise()
             .then(
                 response => JSON.parse(response.json()) as Tempfan
-                //response => Tempfan.fromJson(response.json())
             )
-
-            //.then(response => response.json() as Tempfan)
-            //.then(response => response.json() as TempFan)
             .catch(this.handleError);
     }
 

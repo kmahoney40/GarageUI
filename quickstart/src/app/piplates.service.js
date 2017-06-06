@@ -14,7 +14,8 @@ require("rxjs/add/operator/toPromise");
 var PiplatesService = (function () {
     function PiplatesService(http) {
         this.http = http;
-        this.piplatesUrl = 'http://localhost:51034/api/piplates'; // URL to web api
+        //private piplatesUrl = 'http://localhost:51034/api/piplates';  // URL to web api
+        this.piplatesUrl = 'http://192.168.0.3:82/api/piplates'; // URL to web api
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     PiplatesService.prototype.getPiplate = function () {
