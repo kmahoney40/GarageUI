@@ -21,18 +21,21 @@ export class PiplatesService {
             .catch(this.handleError);
     }
 
-    getPiplates(numRows: number): Promise<string>{
+    getPiplates(numRows: number): Promise<Tempfan[]>{
         const url = `${this.piplatesUrl}/toprows/?rows=${numRows}`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json())
+            //.then(response => response.json())
+            .then(
+                response => JSON.parse(response.json()) as Tempfan[]
+            )
             .catch(this.handleError);
     }
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);
     }   
-
+    
 }
 
 

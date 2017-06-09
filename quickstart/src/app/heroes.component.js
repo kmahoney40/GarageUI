@@ -13,6 +13,7 @@ var router_1 = require("@angular/router");
 // import { HEROES } from './mock-heros';
 var hero_service_1 = require("./hero.service");
 var HeroesComponent = (function () {
+    //numRows = 0;
     function HeroesComponent(heroService, router) {
         this.heroService = heroService;
         this.router = router;

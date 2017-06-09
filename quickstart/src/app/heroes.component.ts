@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
   title = 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
+  //numRows = 0;
   constructor(private heroService: HeroService, private router: Router){}
   
   ngOnInit(): void {

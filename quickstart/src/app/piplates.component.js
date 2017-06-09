@@ -19,22 +19,25 @@ var PiplatesComponent = (function () {
         this.router = router;
         this.pp = "";
         this.pppp = "";
-        this.mostRecent = "Loading values...";
+        this.numRows = 0;
+        // mostRecent = "Loading values...";
         this.tempfan = new tempfan_1.Tempfan();
+        this.tempfans = new Array();
     }
     PiplatesComponent.prototype.ngOnInit = function () {
-        // this.piplatesService.getPiplate()
-        //     .then(top => this.mostRecent = top);
         var _this = this;
         this.piplatesService.getPiplate()
             .then(function (tempfan) { return _this.tempfan = tempfan; });
         this.piplatesService.getPiplates(5)
-            .then(function (pppp) { return _this.pppp = pppp; });
+            .then(function (tempfans) { return _this.tempfans = tempfans; });
+        // this.piplatesService.getPiplates(5)
+        //     .then(this.caba(tempfans));
     };
-    PiplatesComponent.prototype.caba = function (response) {
-        var vv = response;
-        return response.TEMP_FAN_ID;
-    };
+    // caba(response: Tempfan[]): Promise<Tempfan[]>{
+    //     var vv = response;
+    //     this.tempfans = response;
+    //     return this.tempfans;
+    // }
     PiplatesComponent.prototype.cb = function (innn) {
         //this.ppp = innn;
     };
@@ -43,12 +46,19 @@ var PiplatesComponent = (function () {
         this.piplatesService.getPiplate()
             .then(function (tempfan) { return _this.tempfan = tempfan; });
     };
+    PiplatesComponent.prototype.refreshRows = function (numRows) {
+        var _this = this;
+        this.numRows = numRows;
+        this.piplatesService.getPiplates(this.numRows)
+            .then(function (tempfans) { return _this.tempfans = tempfans; });
+    };
     return PiplatesComponent;
 }());
 PiplatesComponent = __decorate([
     core_1.Component({
         selector: 'my-piplates',
-        template: "\n        <h2>My PiPlates</h2>\n        <h2>{{ mostRecent }}</h2>\n        <h2>T1: {{ tempfan.TEMP_1 }} T2: {{ tempfan.TEMP_2 }} T3: {{ tempfan.TEMP_3 }} FAN ON: {{ tempfan.FAN_ON }} T1: {{ tempfan.VOLTAGE }} GMT: {{ tempfan.GMT }}</h2><button (click)=\"refresh()\">Refresh</button>\n        <h2>{{ pppp }}</h2>\n    "
+        templateUrl: './piplates.component.html',
+        styleUrls: ['./heroes.component.css']
     }),
     __metadata("design:paramtypes", [piplates_service_1.PiplatesService, router_1.Router])
 ], PiplatesComponent);

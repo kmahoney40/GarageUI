@@ -28,7 +28,7 @@ var PiplatesService = (function () {
         var url = this.piplatesUrl + "/toprows/?rows=" + numRows;
         return this.http.get(url)
             .toPromise()
-            .then(function (response) { return response.json(); })
+            .then(function (response) { return JSON.parse(response.json()); })
             .catch(this.handleError);
     };
     PiplatesService.prototype.handleError = function (error) {
