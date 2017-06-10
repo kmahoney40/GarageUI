@@ -26,19 +26,7 @@ export class PiplatesComponent implements OnInit {
 
         this.piplatesService.getPiplates(5)
             .then(tempfans => this.tempfans = tempfans);
-        // this.piplatesService.getPiplates(5)
-        //     .then(this.caba(tempfans));
     }
-
-    // caba(response: Tempfan[]): Promise<Tempfan[]>{
-    //     var vv = response;
-    //     this.tempfans = response;
-    //     return this.tempfans;
-    // }
-
-    cb(innn: string): void {
-        //this.ppp = innn;
-    }   
 
     refresh(): void {
         this.piplatesService.getPiplate()

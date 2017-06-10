@@ -30,16 +30,6 @@ var PiplatesComponent = (function () {
             .then(function (tempfan) { return _this.tempfan = tempfan; });
         this.piplatesService.getPiplates(5)
             .then(function (tempfans) { return _this.tempfans = tempfans; });
-        // this.piplatesService.getPiplates(5)
-        //     .then(this.caba(tempfans));
-    };
-    // caba(response: Tempfan[]): Promise<Tempfan[]>{
-    //     var vv = response;
-    //     this.tempfans = response;
-    //     return this.tempfans;
-    // }
-    PiplatesComponent.prototype.cb = function (innn) {
-        //this.ppp = innn;
     };
     PiplatesComponent.prototype.refresh = function () {
         var _this = this;
