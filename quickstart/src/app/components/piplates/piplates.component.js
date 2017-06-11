@@ -50,7 +50,8 @@ PiplatesComponent = __decorate([
         templateUrl: './piplates.component.html',
         styleUrls: ['./heroes.component.css']
     }),
-    __metadata("design:paramtypes", [piplates_service_1.PiplatesService, router_1.Router])
+    __metadata("design:paramtypes", [typeof (_a = typeof piplates_service_1.PiplatesService !== "undefined" && piplates_service_1.PiplatesService) === "function" && _a || Object, router_1.Router])
 ], PiplatesComponent);
 exports.PiplatesComponent = PiplatesComponent;
+var _a;
 //# sourceMappingURL=piplates.component.js.map
