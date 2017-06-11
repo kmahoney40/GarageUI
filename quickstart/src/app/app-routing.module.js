@@ -10,7 +10,7 @@ var router_1 = require("@angular/router");
 var dashboard_component_1 = require("./components/dashboard/dashboard.component");
 var heroes_component_1 = require("./heroes.component");
 var hero_detail_component_1 = require("./hero-detail.component");
-var piplates_component_1 = require("./piplates.component");
+var piplates_component_1 = require("./components/piplates/piplates.component");
 var routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'heroes', component: heroes_component_1.HeroesComponent },

@@ -19,7 +19,7 @@ var heroes_component_1 = require("./heroes.component");
 var dashboard_component_1 = require("./components/dashboard/dashboard.component");
 var hero_service_1 = require("./hero.service");
 var piplates_service_1 = require("./piplates.service");
-var piplates_component_1 = require("./piplates.component");
+var piplates_component_1 = require("./components/piplates/piplates.component");
 var AppModule = (function () {
     function AppModule() {
     }

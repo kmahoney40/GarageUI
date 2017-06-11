@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
-import { PiplatesService } from './piplates.service';
+import { PiplatesService } from './../../piplates.service';
 import { Tempfan } from './tempfan';
          
 @Component({
     selector: 'my-piplates',
     templateUrl: './piplates.component.html',
-    styleUrls: ['./heroes.component.css']
+    styleUrls: ['./../../heroes.component.css']
 })
 export class PiplatesComponent implements OnInit {
     pp = "";

@@ -14,7 +14,7 @@ import { HeroesComponent }     from './heroes.component';
 import { DashboardComponent }  from './components/dashboard/dashboard.component';
 import { HeroService }         from './hero.service';
 import { PiplatesService}      from './piplates.service';
-import { PiplatesComponent }   from './piplates.component';
+import { PiplatesComponent }   from './components/piplates/piplates.component';
 
 @NgModule({
   imports:      [ 

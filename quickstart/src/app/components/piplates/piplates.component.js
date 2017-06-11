@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var piplates_service_1 = require("./piplates.service");
+var piplates_service_1 = require("./../../piplates.service");
 var tempfan_1 = require("./tempfan");
 var PiplatesComponent = (function () {
     //tempfan: Tempfan;
@@ -48,10 +48,9 @@ PiplatesComponent = __decorate([
     core_1.Component({
         selector: 'my-piplates',
         templateUrl: './piplates.component.html',
-        styleUrls: ['./heroes.component.css']
+        styleUrls: ['./../../heroes.component.css']
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof piplates_service_1.PiplatesService !== "undefined" && piplates_service_1.PiplatesService) === "function" && _a || Object, router_1.Router])
+    __metadata("design:paramtypes", [piplates_service_1.PiplatesService, router_1.Router])
 ], PiplatesComponent);
 exports.PiplatesComponent = PiplatesComponent;
-var _a;
 //# sourceMappingURL=piplates.component.js.map
