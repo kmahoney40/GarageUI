@@ -16,6 +16,8 @@ var PiplatesService = (function () {
         this.http = http;
         //private piplatesUrl = 'http://localhost:51034/api/piplates';  // URL to web api
         this.piplatesUrl = 'http://192.168.0.3:82/api/piplates'; // URL to web api
+        //private doorUrl = 'http://localhost:51034/api/piplates';
+        this.doorUrl = 'http://192.168.0.3:82/api/piplates';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     PiplatesService.prototype.getPiplate = function () {
@@ -30,6 +32,16 @@ var PiplatesService = (function () {
             .toPromise()
             .then(function (response) { return JSON.parse(response.json()); })
             .catch(this.handleError);
+    };
+    PiplatesService.prototype.toggleDoor = function () {
+        var url = this.piplatesUrl + "/door";
+        var my_headers = new http_1.Headers({ 'Content-Type': 'text;charset=utf-8;' });
+        var body = "true";
+        var headers = new http_1.Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post('http://localhost:51034/api/door', body, options)
+            .toPromise()
+            .then(function (response) { return "woot"; });
     };
     PiplatesService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only

@@ -39,4 +39,10 @@ export class PiplatesComponent implements OnInit {
         this.piplatesService.getPiplates(this.numRows)
             .then(tempfans => this.tempfans = tempfans);
     }
+
+    toggleDoor(): void {
+        //this.refresh();
+         this.piplatesService.toggleDoor()
+             .then();
+    }
 }

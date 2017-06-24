@@ -42,6 +42,11 @@ var PiplatesComponent = (function () {
         this.piplatesService.getPiplates(this.numRows)
             .then(function (tempfans) { return _this.tempfans = tempfans; });
     };
+    PiplatesComponent.prototype.toggleDoor = function () {
+        //this.refresh();
+        this.piplatesService.toggleDoor()
+            .then();
+    };
     return PiplatesComponent;
 }());
 PiplatesComponent = __decorate([
